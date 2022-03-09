@@ -10,11 +10,16 @@
     "type": "git",
     "url": "git+https://github.com/keeweejames/JavaScript-Playground-2022.git"
   },
-  "keywords": ["learning"],
+  "keywords": [
+    "learning"
+  ],
   "author": "James Beaumont",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/keeweejames/JavaScript-Playground-2022/issues"
   },
-  "homepage": "https://github.com/keeweejames/JavaScript-Playground-2022#readme"
+  "homepage": "https://github.com/keeweejames/JavaScript-Playground-2022#readme",
+  "dependencies": {
+    "nodemon": "^2.0.15"
+  }
 }
