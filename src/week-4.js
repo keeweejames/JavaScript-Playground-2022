@@ -44,3 +44,10 @@ if (number === 10){
 } else {
     console.log("Error")
 } 
+
+// const and let
+const num = 3 //const does not allow variables to be changed, it is fixed
+console.log(num)
+
+let numb = 4 //Allows variables to be changed
+console.log(numb)
