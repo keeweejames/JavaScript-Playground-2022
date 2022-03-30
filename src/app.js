@@ -35,7 +35,6 @@ if (myLight){
 }
 var score1, score2, score3, score4;
 var a = "Hello";
-var b = 1-;
+var b = 10;
 var c = false;
 conspole.log(a);
-}
