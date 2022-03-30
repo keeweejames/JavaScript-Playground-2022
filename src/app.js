@@ -15,9 +15,27 @@ multiple lines
 is done with these.
 */
 
-var myWelcome = "Welcome" //Declaring a variable "myWelcome" with the value "Welcome"
+var myWelcome = "Welcome"
+console.log(myWelcome) //Declaring a variable "myWelcome" with the value "Welcome"
 myWelcome = "You've outstayed your welcome" //Changing the variable "myWelcome"
 console.log(myWelcome); //Outputting new variable "myWelcome"
 var mySurname = "Beaumont"
 mySurname = "BEAUMONT"
 console.log(mySurname)
+
+var messsage; //Learning Boolean function
+console.log(message);
+message = null;
+console.log(message);
+var myLight = false;
+console.log(myLight);
+myLight = true;
+if (myLight){
+    console.log(myLight);
+}
+var score1, score2, score3, score4;
+var a = "Hello";
+var b = 1-;
+var c = false;
+conspole.log(a);
+}
