@@ -51,9 +51,9 @@ console.log(firstName)
 // Two types of local scope
 // 1. Block scope
 
-// const msg = "Hello Earth"
+//const msg = "Hello Earth"
 // if(true){ //Blocks are defined by curly brackets {}
-//     const msg = "Hello World"
+//     //const msg = "Hello World"
 //     console.log(msg)
 // }
 // console.log(msg)
