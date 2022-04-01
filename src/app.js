@@ -83,15 +83,47 @@ console.log(firstName)
 // console.log(readMsg())
 
 //keyword Lexical Scope
-function outerFunction (){ 
-var msg = "Hello World" // Creates a variable called "msg" with the value "Hello World"
+// function outerFunction (){ 
+// var msg = "Hello World" // Creates a variable called "msg" with the value "Hello World"
 
-function innerFunction(){ // Creates another function inside already declared function
-    console.log(msg) // Prints output variable
-}
-console.log(innerFunction()) // This created "undefined" as you can not call/invoke a variable
-                             // that has been defined exclusively within the function. It cannot be 
-                             // accessed from outside the function or within other functions.
-}
-console.log(outerFunction()) // Again "undefined" as this line is outside the function named
-                             // outerFunction.
+// function innerFunction(){ // Creates another function inside already declared function
+//     console.log(msg) // Prints output variable
+// }
+// console.log(innerFunction()) // This created "undefined" as you can not call/invoke a variable
+//                              // that has been defined exclusively within the function. It cannot be 
+//                              // accessed from outside the function or within other functions.
+// }
+// console.log(outerFunction()) // Again "undefined" as this line is outside the function named
+//                              // outerFunction.
+
+//Data types
+/*
+1. Numbers
+2. Boolean
+3. String
+4. Objects
+*/
+// let a = 1 // 'number' data type
+// let b = "Hello" // 'string' data type (either single or double quotations)
+// let c = true // 'Boolean' data type
+// let d; // undefined data type
+
+const value1 = '5';
+const value2 = 9;
+// let sum = value1 + value2; //Would return 59
+let sum = Number(value1) + value2; //Returns 14 as value1 have been given Number(object)
+
+console.log(sum);
+
+// let str = "James"
+// console.log(str)
+// let str1 = "Beaumont"
+// console.log (str1)
+
+// let fullName = str + " " + str1
+// console.log(fullName)
+
+// let newStr = `Hello to my new string! My fullnamme is ${str} ${str1}` //Backticks allow for a string that
+//                                   //contains other operators such as $ which adds a white space
+// console.log(newStr)
+
