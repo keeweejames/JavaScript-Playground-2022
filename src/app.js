@@ -114,16 +114,68 @@ const value2 = 9;
 let sum = Number(value1) + value2; //Returns 14 as value1 have been given Number(object)
 
 console.log(sum);
+let output = `The total sum of ${value1} and ${value2} is ${sum}`
+console.log(output)
 
 // let str = "James"
 // console.log(str)
 // let str1 = "Beaumont"
 // console.log (str1)
 
-// let fullName = str + " " + str1
+// let fullName = str + " " + str1 //The double quotes here add a white space
 // console.log(fullName)
 
 // let newStr = `Hello to my new string! My fullnamme is ${str} ${str1}` //Backticks allow for a string that
-//                                   //contains other operators such as $ which adds a white space
+//                                   //contains other operators such as $ calls actual values
 // console.log(newStr)
 
+let alphabet = "a"
+console.log(Number(alphabet)) //Returns NaN
+
+//Boolean only two keywords 'true' and 'false'
+
+let x = true
+console.log(x)
+console.log(5 > 3)
+console.log(5 < 3)
+console.log(10 >= 4)
+console.log(12 <= 5)
+console.log (10 == 9)
+console.log (10 == 10)
+console.log (10 === 10)
+
+//Array datatype
+
+let test = ["Hello", "James", 21 ,2013] //Array defined by [square] brackets
+console.log(test[2]) //Always remember count starts from "0" so, test[2] is the third value in the array
+for(i=0;i<test.length; i++){ // 'for' loop starting at index "0" and conditions "i" < length of array
+                             // "test" then incremented by 1 (i++)
+    console.log(test[i])
+}
+
+//Object data type
+var dog = {
+    fur: "Black",
+    whiskers: "Many",
+    Paws: 4
+}
+console.log(dog);
+
+/* What is a function?
+Generally speaking, a function is a "subprogram" that can be called by
+ code external (or internal in the case of recursion) to the function.
+ Like the program itself, a function is composed of a sequence of
+ statements called the function body. Values can be passed to a function,
+  and the function will return a value.
+  */
+
+  function div(num1, num2) {
+      return num1/num2
+  }
+  console.log(div(10,5))
+
+function fourNumbers (num1, num2, num3, num4){ //Parameters are num1, num2, num3, num4
+    let result = num1 + num2 + num3 + num4
+return `The sum of ${num1} + ${num2} + ${num3} + ${num4} equals ${result}`
+}
+console.log(fourNumbers(1,2,3,4)) //Arguments are the values of the parameters, in this case 1,2,3,4
