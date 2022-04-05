@@ -32,3 +32,12 @@ console.log(createArray(1, 2))
 const reverseArray = arr => arr.reverse();
 
 console.log(reverseArray([1,2,3,4,5,6,7,8,9]))
+
+// create a function that accepts an array and return the last element 
+// Example: lastElement(["Keith", 23, "blue", "green"]) -> green
+
+function lastElement(arr) { 
+    return arr.pop();
+}
+
+console.log(lastElement) 
