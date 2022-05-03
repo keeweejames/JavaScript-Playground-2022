@@ -323,3 +323,63 @@ class Greeting {
 const new_person = new Greeting("James", "Beaumont")
 console.log(new_person)
 console.log(new_person.greet())
+
+//Create a function that takes an array and return both the minimum and maximum number in order.
+
+//findMinMax([1, 2, 3, 4, 5]) -> [1,5]
+function minMax(arr){ //pass array as parameter in function
+
+    let array = []; //Three values required, need to return answers in an array
+    let min = arr[0]; //Benchmark value for variables in example this is 1
+    let max = arr[0]; //1
+
+    for (let i = 0; i < arr.length; i++){ //for loop index set to zero and runs until index < array length
+        if (arr[i] < min){ //
+            min = arr[i]
+        }
+        if (arr[i] > max){
+            max = arr[i]
+        }
+    }
+    array.push(min)
+    array.push(max)
+
+    return array
+}
+console.log(minMax([1,2,3,4,5,6,7,8,9,10,11,12,13,14,2,3,4,5,123]))
+
+//Create a funnction that concatentates a number of arrays together.
+
+// arraysConcat([1,2,3,4,5], [6,7,8,9]) -> [1,2,3,4,5,6,7,8,9]
+// function concatArray(...args){ 
+//     return [].concat(...args)
+// }
+// console.log(concatArray([12,3,4,5],[2,2,6],[9,8,"hello",12123]));
+
+const concatArray = (...a) => a.flat(Infinity) //2nd solution
+console.log(concatArray([123,123,123], [456,789],[345,654]))
+
+/*Create a function that takes an array of numbers, a string and returns an array of numbers as per the 
+following rules;
+//arrayRules([4,3,2,1], "Asc") -> [1,2,3,4]
+//arrayRules([5,6,7,8,9]), "Des") -> [9,8,7,6,5]
+//arrayRules([4,3,2,1]), "None") -> [4,3,2,1]
+*/
+function arrayRules(arr, str){
+    switch(str){
+        case 'Asc':
+            return arr.sort((a,b) => a-b);
+        case 'Des':
+            return arr.sort((a,b) => b-a);
+        default:
+            return arr
+    }       
+}
+console.log(arrayRules([3,4,5,23,1,12,23,875,23,4,5,6], "Asc"));
+
+//create a function that returns the total number of items (individual values) in nested arrays.
+//nestedArrays([1,[2,3]]) -> 3
+//nestedArrays(1,[2,[3,4]]]) -> 4
+const nestedArrays = arr => arr.flat(Infinity).length;
+console.log(nestedArrays(1,[2,3,4,5,[3,4]]))
+// console.log(nestedArrays(1,[2,3,4,5,[3,4]]))
