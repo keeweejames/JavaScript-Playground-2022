@@ -380,6 +380,183 @@ console.log(arrayRules([3,4,5,23,1,12,23,875,23,4,5,6], "Asc"));
 //create a function that returns the total number of items (individual values) in nested arrays.
 //nestedArrays([1,[2,3]]) -> 3
 //nestedArrays(1,[2,[3,4]]]) -> 4
-const nestedArrays = arr => arr.flat(Infinity).length;
-console.log(nestedArrays(1,[2,3,4,5,[3,4]]))
+
+// const nestedArrays = arr => arr.flat(Infinity).length;
 // console.log(nestedArrays(1,[2,3,4,5,[3,4]]))
+// console.log(nestedArrays(1,[2,3,4,5,[3,4]]))
+
+/* create a function that divides an array into sub arrays based on n number, giving
+where n is the length of each sub array
+
+subarrays([1,2,3,4,5,6,7,8,9,10], 2) -> [[1,2],[3,4],[5,6],[7,8],[9,10]]
+*/
+// function splitArray(arr, n){
+//     let array = [];
+//     let array2 = [];
+//    for(let i = 0; i < arr.length; i++) {
+//      array.push(arr[i]);
+//      if (array.length%n ===0){
+//          array2.push(array);
+//          array=[];
+//      }
+//      else{
+//          array2.push[array]
+//      }
+//      return [... new Set(array)]
+//      }
+// }
+//    console.log(splitArray([1,2,3,4,5,6,7,8,9,10], 2));
+
+   const subarrays = (arr, n) => {
+    let x = [];
+    while (arr.length) {
+        x.push(arr.splice(0, n));
+    }
+    return x;
+}
+console.log(subarrays([1,2,3,4,5,6,7,8,9,10],2));
+
+   //create a function that takes two arrays of numbers and return an array of numbers which are common to
+   //both given arrays
+
+ function arrCommon(arr, arr2) {
+    finalArr = []
+    // Loops through the first array
+    for (let i = 0; i < arr.length; i++) {
+        // Checks if the item is in the other array
+        if (arr2.includes(arr[i])) {
+            finalArr.push(arr[i])
+        }
+    }
+    return finalArr
+ }
+console.log(arrCommon([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], [1, 3, 5, 7, 8, 9, 10]));
+
+const common = (array1, array2) => { //creates a new array 'common'
+    return array1.filter(elem => array2.includes(elem)) //filters array1 with conditions of elem included in array2
+  }
+  console.log(common([1,2,3,4,5,6,7,8,9],[1,2,6,7,4,8,9,3]));
+
+//create a function that takes the elements of an array and returns the ordered elements in ascending and descending order
+
+const array1 = [142, 149, 396, 162];
+
+const map1 = array1.map(elem => {
+    return elem.toString().split("").sort((a,b) => a-b).join("")
+})
+
+console.log(map1);
+
+/*
+Given an object with students and the grades that they made on the tests that they took,
+determine which student has the best Test average
+
+The key will be the student's name and the value will be an array of their grades.
+You will only have to return the student's name. You do not need to return their Test Average.
+
+example:
+getBestStudent({
+    Ali: [67,84,75,63],
+    James: [87,98,64,71],
+    Matt: [90,58,73,86]
+}) -> "James"
+*/
+
+// let user = new Object(); //or
+// let user = {
+//     name: "John",
+//     age: "30"
+// }
+// console.log(user)
+// console.log(user.name)
+
+// let computer = {
+//     name: "Laptop",
+//     price: "$1200"
+// }
+// computer.price = "$1000";
+// console.log(`${computer.name} \n${computer.price}`);
+// delete computer.name;
+// console.log(computer);
+
+// let user = {}
+// console.log(user.noSuchProperty === undefined)
+
+// let users = {name: "John", age: 30};
+// console.log("age" in users);
+// console.log("weight" in users);
+
+// let person = {
+//     name: "John",
+//     age: "45",
+//     isAdmin: true
+// };
+
+// for (let key in person){
+//     console.log(key);
+//     console.log(person[key]);
+// }
+// let salaries = {
+//     John: 100,
+//     Ann: 160,
+//     Peter: 130
+// }
+// let sum = (salaries.John + salaries.Ann + salaries.Peter);
+// console.log(sum);
+
+// let user = {
+//     name: "John"
+// }
+// let admin = user;
+
+// admin.name = "David";
+// console.log(user.name);
+
+// let a = {}
+// let b = a;
+
+// console.log(a == b);
+// console.log(a === b);
+
+// let c = {};
+// let d = {}
+// console.log(c == d);
+
+// const user2 = "John"
+//     // user2 = "James";
+
+// const user3 = {
+//     name: "James"
+// }
+// user3.name = "Dave";
+// console.log(user3.name)
+
+let user4 = {
+    name: "James",
+    age: 45
+};
+let clone = Object.assign({}, user4); //A way of assigning an existing object to a new variable
+console.log(user4)
+clone.name = "Dave"
+console.log(user4.name, clone.name);
+
+let user5 = {
+    name: "John",
+    age: 30
+};
+
+// let user10 = {
+//     sayHi(){
+//         console.log("Hello");
+//     }
+// }
+
+let person1 = {
+    name: "John",
+    age: 30,
+    sayHi() {
+        console.log(this.name);
+    }
+}
+person1.sayHi();
+
